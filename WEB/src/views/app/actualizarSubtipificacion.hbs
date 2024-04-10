@@ -1,0 +1,76 @@
+<div id="main">
+  <div class="row">
+    <div class="col s12">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <div id="input-fields" class="card card-tabs">
+              <div class="card-content">
+                <div class="card-title">
+                  <div class="row">
+                    <div class="col s12 m6 l10">
+                      <h4 class="card-title" data-i18n="Actualizar subtipificacion">Actualizar subtipificacion</h4>
+                    </div>
+                  </div>
+                </div>
+                <div id="view-input-fields">
+                  <div class="row">
+                    <div class="col s12">
+                      <form class="row"
+                        action="/subtipificaciones/actualizarSubtipificacion/{{Subtipificacion.EnCrypt}}" method="post">
+
+                        <div class="row">
+                          <!-- TIP_CNOMBRE_TIPIFICACION (replacing OP_CATEGORIA) -->
+
+
+
+                          <div class="input-field col s12 m8 l4">
+                            <input type="hidden" name="subtipificacion_categoria"
+                              value="{{Subtipificacion.OP_CATEGORIA}}" />
+
+                            <input type="text" value="{{Subtipificacion.TIP_CNOMBRE_TIPIFICACION}}" readonly />
+                            <label for="subtipificacion_categoria" data-i18n="Categoria">Categoria<span
+                                class="red-text">*</span></label>
+                          </div>
+                        </div>
+
+
+                        <div class="row">
+                          <!-- Contenido -->
+                          <div class="input-field col s12 m12 l12">
+                            <div>
+                              <label for="subtipificacion_contenido" data-i18n="Contenido">Contenido<span
+                                  class="red-text">*</span></label>
+
+                            </div>
+                            <div>
+                              <textarea name="subtipificacion_contenido" id="subtipificacion_contenido" required
+                                style="height: auto;" onpaste="contarcaracteres();"
+                                onkeyup="contarcaracteres();">{{{Subtipificacion.OP_OPCION}}}</textarea>
+
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <button class="btn color-oscuro waves-effect waves-light right" type="submit" name="action">
+                              <span data-i18n="Modificar subtipificacion">Modificar subtipificacion</span>
+                              <i class="material-icons right">send</i>
+                            </button>
+                          </div>
+                        </div>
+
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/actualizarSubtipificacion.js"></script>

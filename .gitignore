@@ -1,0 +1,5 @@
+*.log
+node_modules/
+WebHookWhasappConnetly/media/
+WebHookWhasappConnetly/receivedFiles/
+logs/

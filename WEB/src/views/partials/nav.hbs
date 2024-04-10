@@ -1,0 +1,191 @@
+<!-- BEGIN: SideNav-->
+<aside {{!--
+      class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-dark color-oscuro sidenav-gradient sidenav-active-rounded">
+      --}}
+      class="sidenav-main nav-collapsed nav-collapsible sidenav-light sidenav-active-square">
+      <div class="brand-sidebar">
+            <h1 class="logo-wrapper"><a class="brand-logo darken-1" href="/redirect"><img class="hide-on-med-and-down"
+                              src="/images/logo/icono_claro.png" alt="materialize logo" /><img
+                              class="show-on-medium-and-down hide-on-med-and-up" src="/images/logo/icono_claro.png"
+                              alt="materialize logo" /><span
+                              class="logo-text hide-on-med-and-down">GroupCos</span></a><a class="navbar-toggler"
+                        href="#"><i class="material-icons">radio_button_unchecked</i></a></h1>
+      </div>
+
+      <ul class="sidenav sidenav-collapsible leftside-navigation collapsible sidenav-fixed menu-shadow" id="slide-out"
+            data-menu="menu-navigation" data-collapsible="menu-accordion">
+            {{#if (isSupervisorOrAdministrator user.Rol)}}
+
+            <li class="navigation-header"><a class="navigation-header-text">Reportes</a><i
+                        class="navigation-header-icon material-icons">more_horiz</i>
+            </li>
+
+            <li class="bold"><a class="collapsible-header waves-effect waves-black accent-3"
+                        href="JavaScript:void(0)"><i class="material-icons">assignment</i><span class="menu-title"
+                              data-i18n="Reportes">Reportes</span></a>
+                  <div class="collapsible-body">
+                        <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                              <li><a href="/reportes/reporteInteracciones"><i
+                                                class="material-icons">radio_button_unchecked</i><span
+                                                data-i18n="Interacciones">Interacciones</span></a>
+                              </li>
+                              <li><a href="/reportes/reporteTransferencias"><i
+                                                class="material-icons">radio_button_unchecked</i><span
+                                                data-i18n="Transferencias">Transferencias</span></a>
+                              </li>
+                              {{!-- <li><a href="/reportes/reporteAbandono"><i
+                                                class="material-icons">radio_button_unchecked</i><span
+                                                data-i18n="Abandono">Abandono</span></a>
+                              </li> --}}
+                              <li><a href="/reportes/reporteAgentes"><i
+                                                class="material-icons">radio_button_unchecked</i><span
+                                                data-i18n="Agentes">Agentes</span></a>
+                              </li>
+                        </ul>
+                  </div>
+            </li>
+
+            <li class="navigation-header"><a class="navigation-header-text">Plantillas</a><i
+                        class="navigation-header-icon material-icons">more_horiz</i>
+            </li>
+
+
+            <li class="bold"><a class="collapsible-header waves-effect waves-black accent-3"
+                        href="JavaScript:void(0)"><i class="material-icons">content_paste</i><span class="menu-title"
+                              data-i18n="Plantillas">Plantillas</span></a>
+                  <div class="collapsible-body">
+                        <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                              <li><a href="/plantillas/crearPlantilla"><i
+                                                class="material-icons">radio_button_unchecked</i><span
+                                                data-i18n="Crear plantilla">Crear plantilla</span></a>
+                              </li>
+                              <li><a href="/plantillas/listarPlantillas"><i
+                                                class="material-icons">radio_button_unchecked</i><span
+                                                data-i18n="Modificar plantilla">Modificar plantilla</span></a>
+                              </li>
+                        </ul>
+                  </div>
+            </li>
+
+            <li class="navigation-header"><a class="navigation-header-text">Tipificaciones</a><i
+                        class="navigation-header-icon material-icons">more_horiz</i>
+            </li>
+
+
+            <li class="bold"><a class="collapsible-header waves-effect waves-black accent-3"
+                        href="JavaScript:void(0)"><i class="material-icons">clear_all</i><span class="menu-title"
+                              data-i18n="Tipificaciones">Tipificaciones</span></a>
+                  <div class="collapsible-body">
+                        <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                              <li><a href="/tipificaciones/crearTipificacion"><i
+                                                class="material-icons">radio_button_unchecked</i><span
+                                                data-i18n="Crear tipificación">Crear tipificación</span></a>
+                              </li>
+                              <li><a href="/tipificaciones/listarTipificacion"><i
+                                                class="material-icons">radio_button_unchecked</i><span
+                                                data-i18n="Modificar tipificación">Modificar tipificación</span></a>
+                              </li>
+                        </ul>
+                  </div>
+            </li>
+
+            <li class="bold"><a class="collapsible-header waves-effect waves-black accent-3"
+                        href="JavaScript:void(0)"><i class="material-icons">sort</i><span class="menu-title"
+                              data-i18n="Subtipificaciones">Subtipificaciones</span></a>
+                  <div class="collapsible-body">
+                        <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                              <li><a href="/subtipificaciones/crearSubtipificacion"><i
+                                                class="material-icons">radio_button_unchecked</i><span
+                                                data-i18n="Crear tipificación">Crear subtipificación</span></a>
+                              </li>
+                              <li><a href="/subtipificaciones/listarSubtipificacion"><i
+                                                class="material-icons">radio_button_unchecked</i><span
+                                                data-i18n="Modificar tipificación">Modificar </span></a>
+                              </li>
+                        </ul>
+                  </div>
+            </li>
+
+            <li class="navigation-header"><a class="navigation-header-text">Admin Usuarios</a><i
+                        class="navigation-header-icon material-icons">more_horiz</i>
+            </li>
+
+            <li class="bold"><a class="collapsible-header waves-effect waves-black accent-3"
+                        href="JavaScript:void(0)"><i class="material-icons">group_add</i><span class="menu-title"
+                              data-i18n="Usuarios">Usuarios</span></a>
+                  <div class="collapsible-body">
+                        <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                              <li><a href="/usuarios/crearUsuario"><i
+                                                class="material-icons">radio_button_unchecked</i><span
+                                                data-i18n="Crear usuarios">Crear usuario</span></a>
+                              </li>
+                              <li><a href="/usuarios/listarUsuarios"><i
+                                                class="material-icons">radio_button_unchecked</i><span
+                                                data-i18n="Modificar usuarios">Modificar usuario</span></a>
+                              </li>
+                        </ul>
+                  </div>
+            </li>
+
+            <li class="navigation-header"><a class="navigation-header-text">Dashboard</a><i
+                        class="navigation-header-icon material-icons">more_horiz</i>
+            </li>
+
+
+            <li><a class="waves-effect waves-cyan" href="/dashboard"><i class="material-icons">dashboard</i><span
+                              data-i18n="Dashboard">Dashboard</span></a></li>
+            {{!-- <li><a class="waves-effect waves-black accent-3" href="/dashboard/bot"><i
+                              class="material-icons">table_chart</i><span data-i18n="Dashboard">Dashboard BOT</span></a>
+            </li> --}}
+            {{else}}
+            {{#if (isReporting user.Rol)}}
+
+
+            <li class="bold"><a class="collapsible-header waves-effect waves-black accent-3"
+                        href="JavaScript:void(0)"><i class="material-icons">assignment</i><span class="menu-title"
+                              data-i18n="Reportes">Reportes</span></a>
+                  <div class="collapsible-body">
+                        <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                              <li><a href="/reportes/reporteInteracciones"><i
+                                                class="material-icons">radio_button_unchecked</i><span
+                                                data-i18n="Interacciones">Interacciones</span></a>
+                              </li>
+                              <li><a href="/reportes/reporteTransferencias"><i
+                                                class="material-icons">radio_button_unchecked</i><span
+                                                data-i18n="Transferencias">Transferencias</span></a>
+                              </li>
+                              <li><a href="/reportes/reporteAbandono"><i
+                                                class="material-icons">radio_button_unchecked</i><span
+                                                data-i18n="Abandono">Abandono</span></a>
+                              </li>
+                              <li><a href="/reportes/reporteAgentes"><i
+                                                class="material-icons">radio_button_unchecked</i><span
+                                                data-i18n="Agentes">Agentes</span></a>
+                              </li>
+                        </ul>
+                  </div>
+            </li>
+            {{/if}}
+            {{/if}}
+
+            {{#if (isAdministrador user.Rol)}}
+
+            <li class="navigation-header"><a class="navigation-header-text">Otros</a><i
+                        class="navigation-header-icon material-icons">more_horiz</i>
+            </li>
+
+            <li class="bold"><a href="/textoBot/arbolBot" class="waves-effect waves-black accent-3"><i
+                              class="material-icons">chat</i><span class="menu-title" data-i18n="Guion BOT">Guion
+                              BOT</span></a></li>
+            <li class='bold'><a href='/mensajeria/masivo/cargar-excel' class='waves-effect waves-black accent-3'><i
+                              class='material-icons'>file_upload</i><span class='menu-title'
+                              data-i18n='Cargar Excel'>Cargar excel</span></a></li>
+            {{/if}}
+
+
+      </ul>
+      <div class="navigation-background"></div><a
+            class="sidenav-trigger btn-sidenav-toggle btn-floating btn-medium waves-effect waves-light hide-on-large-only"
+            href="#" data-target="slide-out"><i class="material-icons">menu</i></a>
+</aside>
+<!-- END: SideNav-->

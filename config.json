@@ -1,0 +1,33 @@
+{  "connectly": {
+    "numero": "+573105663461"
+  },
+    "pathFolder":{
+        "media": "/1tb/NodeJS/COS_RPA_CRMBOTWHATSAPPOFICIALWINSPORT/WebHookWhasappConnetly/media",
+        "receivedFiles": "/1tb/NodeJS/COS_RPA_CRMBOTWHATSAPPOFICIALWINSPORT/WebHookWhasappConnetly/receivedFiles"
+    },  
+    "WebHookWhasapp": {
+        "PORT": 15260,
+        "URL": "https://demobotcrmwhatsappwinsportoficial.rpagroupcos.com/"
+    },
+    "WEB": {  
+        "PORT": [14026],   
+        "URL": "https://democrmwhatsappwinsportoficial.rpagroupcos.com/"
+    },
+    "EnviarMensajes": {
+        "PORT": 15264,
+        "URL": "https://demoenviarmensajecrmwhatsappwinsportoficial.rpagroupcos.com/"
+    },
+    "ConsultarMensajes": {
+        "PORT": 15262,
+        "URL": "https://democonsultamensajecrmwhatsappwinsportoficial.rpagroupcos.com/"
+    },
+    "Asignacion": {
+        "PORT": 15261,
+        "URL": "https://demoasignacioncrmwhatsappwinsportoficial.rpagroupcos.com/"
+    },
+    "EstadoMensajes": {
+        "PORT": 15265,
+        "URL": "https://demoapibotcrmwhatsappwinsportoficial.rpagroupcos.com/"
+    }
+}  
+

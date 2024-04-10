@@ -1,0 +1,137 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+.backGround {
+  width: 100%;
+  height: 100%;
+  /* background-image: url("/images/logo/background.png"); */
+  /* background: linear-gradient(249deg,#76ff03, #ffffff) !important; */
+  background: #f4f4f4;
+}
+.container-login {
+  width: 70vw;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.illustration {
+  /* background-color: #BBD14F; */
+  background-image: linear-gradient(249deg, #993333, #970303);
+  /* border-radius: 1em 0 0 1em; */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+.illustration img {
+  max-width: 80%; /* Ajusta el ancho máximo de la imagen */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+  padding: 20px;
+}
+.login {
+  background-color: rgba(255, 255, 255, 0.695);
+  /* border-radius: 0 1em 1em 0; */
+  padding: 120px 90px 40px 90px;
+}
+.mitad {
+  min-width: 50%;
+  width: auto;   
+}
+.avatar {
+  width: 200px;
+  padding: 30px;
+}
+.input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.5rem 0.7rem;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  color: #555;
+}
+.btn {
+  display: block;
+  width: 80%;
+  height: 50px;
+  border-radius: 25px;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(249deg, #993333, #970303) !important;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  background-size: 200%;
+  transition: 0.5s;
+}
+.container-login .btn:hover {
+  background-position: right;
+}
+@media screen and (max-width: 1280px) {
+   .login {
+    background-color: rgba(255, 255, 255, 0.695);
+    /* border-radius: 0 1em 1em 0; */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos */ 
+    padding: 0px;
+  }
+  .avatar {
+    width: 200px;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container-login {
+    width: 70%;
+    grid-template-columns: 1fr;
+  }
+  .avatar {
+    width: 150px;
+    padding: 20px;
+  }
+  .btn {
+    display: block;
+    width: 50%;
+    height: 50%;
+  }
+  .input-field {
+    width: 95%;
+    height: 100%;
+  }
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.centered {
+  text-align: center; /* Centra el contenido del formulario */
+}
+.input-field {
+  position: relative;
+}
+.input-field .suffix.hideShowPassWord {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}

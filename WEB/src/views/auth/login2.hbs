@@ -1,0 +1,33 @@
+<div class="background">
+    {{!-- <div id="particles-js"></div> --}}
+    <div class="container-login center">        
+        <div class="mitad illustration">
+            <div class="img centered">
+                <img class="" src="/img/chat_claro.png" alt="Fondito" />
+            </div>
+        </div>
+        <div class="mitad login">
+            <div class="centered p-4">
+                <form action="/Login" method="POST">
+                    <img class="avatar" src="/images/logo/logo_claro.png" alt="Avatar" />
+                    <p>Le enviamos un código de confirmación a su correo electrónico registrado</p>
+                    <div class="input-field" hidden>
+                        <i class="material-icons prefix pt-2">person_outline</i>
+                        <input id="username" type="text" name="username" value= "{{nombreDeUsuario}}" autocomplete="off">
+                        <label for="username" class="center-align">Username</label>
+                    </div>
+                    <p><strong>Token</strong></p>
+                    <div class="input-field">
+                        <i class="material-icons prefix pt-2">account_box</i>
+                        <input id="password" type="number" name="password" autocomplete="off" autofocus>
+                        <label for="password" class="center-align"></label>
+                    </div>
+                    
+                    <a href="#"></a>
+                    <center><input type="submit" class="btn" value="Login" name="btnSubmit" id="btnSubmitId" /></center>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/preLogin.js"></script>

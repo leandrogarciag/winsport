@@ -1,0 +1,98 @@
+<div id="main">
+    <div class="row">
+        <div class="col s12">
+            <div class="container">
+                <div class="section section-data-tables">
+
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-title">
+                                <h4 class="card-title" data-i18n="Reporte Abandono">Reporte Abandono</h4>
+                                <div class="row">
+                                    <div class="col s12">
+                                        <div class="input-field col s12 m3 l3">
+                                            <input type="text" name="fechaInicial" id="fechaInicial" class="datepicker">
+                                            <label for="fechaInicial" data-i18n="Fecha inicial">Fecha inicial</label>
+                                        </div>
+                                        <div class="input-field col s12 m3 l3">
+                                            <input type="text" name="fechaFinal" id="fechaFinal" class="datepicker">
+                                            <label for="fechaFinal" data-i18n="Fecha final">Fecha final</label>
+                                        </div>
+
+                                        <div class="input-field col s12 m3 l3">
+                                            <select class="select2 browser-default" id="listaAgentes">
+                                                <option value="0">ALL</option>
+                                                {{#each datasqlListaAgentes}}
+                                                <option value="{{this.PKUSU_NCODIGO}}">{{this.USU_CUSUARIO}}</option>
+                                                {{/each}}
+                                            </select>
+                                        </div>
+
+                                        {{!-- <div class="input-field col s12 m2 l2">
+                                            <select class="select2 browser-default" name="nivel" id="nivel">
+                                                <option value="L">ALL</option>
+                                                <option value="L1">L1</option>
+                                                <option value="L2">L2</option>
+                                                <option value="L3">L3</option>
+                                            </select>
+                                        </div> --}}
+
+                                        <div class="input-field col s12 m1 l1">
+                                            <a class="waves-effect waves-light btn color-oscuro" id="Buscar"><i
+                                                    class='bx bx-search-alt'></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Datatable Lista usuarios -->
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <table id="page-length-option" class="display">
+                                                <thead>
+                                                    <tr>
+                                                        <th data-i18n="Agente">Agente</th>
+                                                        <th data-i18n="Cliente">Cliente</th>
+                                                        {{!-- <th data-i18n="Nivel">Nivel</th> --}}
+                                                        <th data-i18n="Inicio de gestion">Inicio de gestion</th>
+                                                        <th data-i18n="Fin de gestion">Fin de gestion</th>
+                                                        <th data-i18n="Motivo">Motivo</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="bodyListaRegistroTransferencias">
+
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th data-i18n="Agente">Agente</th>
+                                                        <th data-i18n="Cliente">Cliente</th>
+                                                        {{!-- <th data-i18n="Nivel">Nivel</th> --}}
+                                                        <th data-i18n="Inicio de gestion">Inicio de gestion</th>
+                                                        <th data-i18n="Fin de gestion">Fin de gestion</th>
+                                                        <th data-i18n="Motivo">Motivo</th>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FIN Datatable Lista usuarios -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/reporteAbandono.js"></script>
